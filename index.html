@@ -32,6 +32,30 @@
  <button type="submit" id="submit" onclick="fnum1()">submit</button>
  <button type="button" id="function" onclick="fnum2()">function</button>
  </p>
+ </form>
+ <form method="post">
+  <table border="1" id="v_table">
+  <thead>
+  <tr>
+  <th>xml_id</th>
+  <th>значение</th>
+  <th>сорт.</th>
+  <th>по умол.
+  <input type="radio" name="default" value="none" checked></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td><input type="text" name="xml_id[0]"></td>
+      <td><input type="text" name="values[0]"></td>
+      <td><input type="text" name="val_sort[0]" value="500"></td>
+      <td><input type="radio" name="default" value="0"></td>
+  </tr>
+  </tbody>
+  </table>
+   
+  <input type="button" onclick="add_value_f()" value="Добавить поле"/>
+  <input type="submit" name="send" value="Сохранить">
  </form> 
  <form action="#" method="post" target="_blank">
    <h2></h2>
