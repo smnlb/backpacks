@@ -1,27 +1,21 @@
-document.addEventListener(‘DOMContentLoaded’, function() {
+function addInputs() {
+  let numberOfInputs = parseInt(document.getElementById('inputCount').value);
+  if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) {
+    alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!');
+    return;
+  }
 
-const form = document.getElementById(‘myForm’);
+  let container = document.getElementById('inputContainer'); // Это место для новых полей
+  while (container.hasChildNodes()) { 
+    container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+  }
 
-const inputContainer = document.getElementById(‘inputContainer’);
-
-const addButton = document.getElementById(‘addInput’);
-
-addButton.addEventListener(‘click’, function() {
-
-const newInput = document.createElement(‘input’);
-
-newInput.type = ‘text’;
-
-inputContainer.appendChild(newInput);
-
-});
-
-form.addEventListener(‘submit’, function(event) {
-
-event.preventDefault(); // Предотвращаем отправку
-
-// Здесь можно обработать отправку данных
-
-});
-
-});
+  for (let i = 0; i < numberOfInputs; i++) {
+    let input = document.createElement('input');
+    input.type = 'text';
+    input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
+    input.placeholder = `Ввод ${i + 1}`;
+    container.appendChild(input); // Добавляем новое поле в контейнер
+    container.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
+  }
+}
