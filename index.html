@@ -34,6 +34,10 @@
  </p>
  </form> 
  <form id="form" method="POST" action="save_data.php">
+  <p>
+    <label for="num">Выберите количество учебников из диапазона: </label> 
+    1<input autofocus class="inp" type="range" step="1" min="1" max="20" value="10" id="num" name="num" autocomplete="off"/>20
+  </p>
   <input type="text" name="text_field[]">
   <button type="submit">SUBMIT</button>
  </form>
