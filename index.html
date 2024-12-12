@@ -33,40 +33,33 @@
  <button type="button" id="function" onclick="fnum2()">function</button>
  </p>
  </form>
- <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=DVWhVHtFk4bqj9BYaSigRi-e2xn1F9oay6hoj5QQCI6QwX_8MfKml9tL2ypsk2z5tZwTZT2auiYhen5rCcg77Q" charset="UTF-8"></script><script type="text/javascript">
+ <script type="text/javascript">
   var d = document;
   var last_id = 0;
-  function add_value_f() {
-    
+  function add_value_f() {    
     // находим нужную таблицу
-      var tbody = d.getElementById('v_table').getElementsByTagName('tbody')[0];
-    
+    var tbody = d.getElementById('v_table').getElementsByTagName('tbody')[0];    
     // создаем строку таблицы и добавляем ее
-      var row = d.createElement("tr");
-    tbody.appendChild(row);
-  
+    var row = d.createElement("tr");
+    tbody.appendChild(row);  
       // создаем ячейки в вышесозданной строке
-      var td1 = d.createElement("td");
-      var td2 = d.createElement("td");
+    var td1 = d.createElement("td");
+    var td2 = d.createElement("td");
     var td3 = d.createElement("td");
-    var td4 = d.createElement("td");
-  
-      row.appendChild(td1);
-      row.appendChild(td2);
+    var td4 = d.createElement("td");  
+    row.appendChild(td1);
+    row.appendChild(td2);
     row.appendChild(td3);
-    row.appendChild(td4);
-    
+    row.appendChild(td4);    
     last_id = last_id + 1;
   
     // добавляем формы ввода в ячейки
-      td1.innerHTML = '<input type="text" name="xml_id['+last_id+']">';
-      td2.innerHTML = '<input type="text" name="values['+last_id+']">';
+    td1.innerHTML = '<input type="text" name="xml_id['+last_id+']">';
+    td2.innerHTML = '<input type="text" name="values['+last_id+']">';
     td3.innerHTML = '<input type="text" name="val_sort['+last_id+']" value="500">';
     td4.innerHTML = '<input type="radio" name="default" value="'+last_id+'">';
   }
-  </script>
-  <head>
-  <body>
+ </script>
   <form method="post">
   <table border="1" id="v_table">
   
