@@ -84,7 +84,7 @@
   <input type="button" onclick="add_value_f()" value="Добавить поле"/>
   <input type="submit" name="send" value="Сохранить">
   </form>
- <form action="#" method="post" target="_blank">
+ <form action="#" method="post" target="_blank" id="myForm">
    <h2></h2>
    <fieldset>
      <legend>Введите номера учебников:</legend>
@@ -126,9 +126,15 @@
      <p>* — Обязательные поля</p>
    </div>
  </form>
- <p id=text class=text> 
- 
- </p>
+ <script>
+ for (let i = 0; i < 5; i++) {
+  document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
+    type: 'text',
+    name: `input${i}`,
+    placeholder: `Ввод ${i + 1}`
+  }));
+}
+ </script>
  <script>
  "use strict";
  function fnum1() {
