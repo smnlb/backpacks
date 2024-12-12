@@ -33,6 +33,53 @@
  <button type="button" id="function" onclick="fnum2()">function</button>
  </p>
  </form> 
+  <form action=»/submit» method=»post» id=»myForm»>
+ <div id=»inputContainer»></div>
+ <button type=»button» id=»addInput»>Добавить поле ввода</button>
+ </form>
+ <script src=»script.js»></script>
+ <form action="#" method="post" target="_blank">
+  <h2></h2>
+  <fieldset>
+    <legend>Введите номера учебников:</legend>
+    <ul>
+      <li>
+        <label for="age">Возраст:</label>
+        <input type="number" name="age" placeholder="27" id="age" min="0" max="125">
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>Учёба</legend>
+    <ul>
+      <li>
+        <input type="checkbox" name="books" id="books">
+        <label for="books">Читаю книги</label>
+      </li>
+      <li>
+        <input type="checkbox" name="video" id="video">
+        <label for="video">Смотрю видео</label>
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>Предпочтения</legend>
+    <ul>
+      <li>
+        <input type="radio" name="preference" id="front" value="frontend" checked>
+        <label for="front">Фронтенд-разработка</label>
+      </li>
+      <li>
+        <input type="radio" name="preference" id="back" value="backend">
+        <label for="back">Бэкенд-разработка</label>
+      </li>
+    </ul>
+  </fieldset>
+  <div>
+    <button type="submit">Отправить</button>
+    <p>* — Обязательные поля</p>
+  </div>
+</form>
  <p id=text class=text> 
  
  </p>
