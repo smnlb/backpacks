@@ -2,6 +2,17 @@ p {
   background-color: #eee; /* Светло-серый фон */
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 800
+
+.ubuntu-sans-<uniquifier> {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 /* Отступы */
 table {
   table-layout: fixed;
