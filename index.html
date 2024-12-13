@@ -69,8 +69,9 @@
      <p>* — Обязательные поля</p>
    </div>
   </form>
-  <form action="" method="get" name="frm" id="frm"> 
-    <fieldset id="fieldset">
+  <form action="" method="post" name="frm" id="frm">
+   <div id="fieldset">
+    <fieldset>
      <legend>Choose parameters of your book</legend>
      <input type="number" id="num1" name="field" placeholder="Ввод" />
      <label for="num1"></label><br />
@@ -79,6 +80,7 @@
      <input type="radio" id="type2" name="field"/>
      <label for="type2">Тонкая</label>
     </fieldset>
+  </div>
      <input name = "" type = "button" value = "Новое поле" onClick = "AddElement()" />
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddAnyElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddAnyElement ('radio')" /> 
