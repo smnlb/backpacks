@@ -94,7 +94,7 @@
   <input type="button" onclick="add_value_f()" value="Добавить поле"/>
   <input type="submit" name="send" value="Сохранить">
   </form>
- <form action="#" method="post" target="_blank" id="myForm">
+  <form action="#" method="post" target="_blank" id="myForm">
    <h2></h2>
    <fieldset>
      <legend>Введите номера учебников:</legend>
@@ -135,19 +135,8 @@
      <button type="submit">Отправить</button>
      <p>* — Обязательные поля</p>
    </div>
- </form>
- <script> 
-  function AddElement(){ 
-  var mytype,form=document.getElementById("add"); 
-  var newInput = document.createElement("input");  
-  <!--newInput.type=mytype;-->
-  newInput.name="input1"; 
-  form.appendChild(newInput); 
-  var newline= document.createElement("br"); 
-  form.appendChild(newline); 
-  } 
- </script> 
-   <form action="" method="get" name="frm"> 
+  </form>
+  <form action="" method="get" name="frm"> 
    <div id="add"> 
     <fieldset>
      <legend>Choose your favorite monster</legend>
@@ -158,21 +147,31 @@
      <input type="radio" id="mothman" name="field" value="M" />
      <label for="mothman">Mothman</label>
     </fieldset> 
+     <input name = "" type = "button" value = "Новое поле" onClick = "AddElement()" />
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddElement ('radio')" /> 
      <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddElement ('submit')" /> 
      <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" />   
    </div> 
-   </form>
- <script>
- for (let i = 0; i < 5; i++) {
-  AddElement();
-  document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
-    type: 'text',
-    name: `input${i}`,
-    placeholder: `Ввод ${i + 1}`
-  }));
-}
+  </form>
+  <script> 
+    function AddElement(mytype){ 
+    var mytype,form=document.getElementById("add"); 
+    var newInput = document.createElement("input");  
+    newInput.type=mytype;
+    newInput.name="input1"; 
+    form.appendChild(newInput); 
+    var newline= document.createElement("br"); 
+    form.appendChild(newline); 
+    } 
+  for (let i = 0; i < 5; i++) {
+   AddElement();
+   document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
+     type: 'text',
+     name: `input${i}`,
+     placeholder: `Ввод ${i + 1}`
+   }));
+  }
  </script>
  <script>
  "use strict";
