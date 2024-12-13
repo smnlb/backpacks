@@ -87,23 +87,23 @@
   </form>
   <script> 
     function AddElement(){ 
-    var form=document.getElementById("myForm"); 
+    var form=document.getElementById("frm"); 
     var exampleInput = document.getElementById('fieldset');  
     form.appendChild(exampleInput); 
     var newline= document.createElement("br"); 
     form.appendChild(newline); 
     }
     function AddAnyElement(mytype){
-    var form=document.getElementById("myForm");
+    var form=document.getElementById("frm");
     var typicalInput = document.createElement("input");
-    newInput.type=mytype; 
+    typicalInputInput.type=mytype; 
     form.appendChild(typicalInput);
     }
-    AddElement(number)
+    AddAnyElement(number)
   </script>
   <script>
   for (let i = 0; i < 5; i++) {
-    document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
+    document.getElementById('frm').appendChild(Object.assign(document.createElement('input'), {
       type: 'text',
       name: `input${i}`,
       placeholder: `Ввод ${i + 1}`
