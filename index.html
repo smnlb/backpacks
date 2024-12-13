@@ -109,7 +109,7 @@
     <div id="inputContainer">
       <div class="inputWrapper">
         <input type="text" id="inputField1">
-        <button class="removeButton">Remove</button>
+        <button class="removeButton" id="removeButton" value = 'Remove'></button>
       </div>
     </div>
     <button id="addButton">Add Field</button>
@@ -129,7 +129,7 @@
     newInputWrapper.appendChild(newInput);
   
     var newButton = document.createElement('button');
-    newButton.textContent = ' Remove';
+    newButton.textContent = 'Remove';
     newButton.classList.add('removeButton');
     newButton.addEventListener('click', function(event) {
       event.preventDefault();
