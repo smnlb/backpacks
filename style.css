@@ -1,5 +1,8 @@
-/* Отступы */
+p {
+  background-color: #eee; /* Светло-серый фон */
+}
 
+/* Отступы */
 table {
   table-layout: fixed;
   width: 100%;
