@@ -99,18 +99,9 @@
     }
     AddElement(number)
   </script>
-  <script> 
-  for (let i = 0; i < 5; i++) {
-   AddElement();
-   document.getElementById('frm').appendChild(Object.assign(document.createElement('input'), {
-     type: 'text',
-     name: `input${i}`,
-     placeholder: `Ввод ${i + 1}`
-   }));
-  }
-  </script>
   <script>
   for (let i = 0; i < 5; i++) {
+    AddElement()
     document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
       type: 'text',
       name: `input${i}`,
