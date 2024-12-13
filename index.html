@@ -89,14 +89,14 @@
   </form>
   <script> 
     function AddElement(mytype){ 
-    var form=document.getElementById("frm"); 
+    var form=document.getElementById("myForm"); 
     var oldInput = document.getElementById('fieldset');  
     form.appendChild(oldInput); 
     var newline= document.createElement("br"); 
     form.appendChild(newline); 
     }
     function AddAnyElement(mytype){
-    var form=document.getElementById("frm");
+    var form=document.getElementById("myForm");
     var typicalInput = document.createElement("input");
     newInput.type=mytype; 
     form.appendChild(typicalInput);
