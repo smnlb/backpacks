@@ -180,16 +180,30 @@
      <p>* — Обязательные поля</p>
    </div>
  </form>
+ <script> 
+  function AddElement(mytype){ 
+  var mytype,form=document.getElementById("add"); 
+  var newInput = document.createElement("input");  
+  newInput.type=mytype;  
+  newInput.name="input1"; 
+  form.appendChild(newInput); 
+  var newline= document.createElement("br"); 
+  form.appendChild(newline); 
+  } 
+ </script> 
+   <form action="" method="get" name="frm"> 
+   <div id="add"> 
+     <input type="text" name="textfield">
+   </div> 
+   </form> 
+     <input name = "" type = "button" value = "Новое текстовое поле" onClick = "AddElement ('text')" /> 
+     <input name = "" type = "button" value = "Новый флажок" onClick = "AddElement ('checkbox')" /> 
+     <input name = "" type = "button" value = "Новый переключатель" onClick = "AddElement ('radio')" /> 
+     <input name = "" type = "button" value = "Поле нового файла" onClick = "AddElement ('file')" /> 
+     <input name = "" type = "button" value = "Ящик с новым паролем" onClick = "AddElement ('password')" /> 
+     <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddElement ('submit')" /> 
+     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" />   
  <script>
- function AddElement(mytype){
- var mytype,form=document.getElementById('myForm');
- var newInput = document.createElement('input');
- newInput.type=mytype;
- newInput.name='input1';
- form.appendChild(newInput);
- var newline = document.createElement ("br"); 
- form.appendChild(newline);
-}
  for (let i = 0; i < 5; i++) {
   AddElement('number');
   document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
