@@ -69,9 +69,8 @@
      <p>* — Обязательные поля</p>
    </div>
   </form>
-  <form action="" method="get" name="frm"> 
-   <div id="fieldset"> 
-    <fieldset>
+  <form action="" method="get" name="frm" id="frm"> 
+    <fieldset id="fieldset">
      <legend>Choose parameters of your book</legend>
      <input type="number" id="num1" name="field" placeholder="Ввод" />
      <label for="num1"></label><br />
@@ -80,18 +79,17 @@
      <input type="radio" id="type2" name="field"/>
      <label for="type2">Тонкая</label>
     </fieldset>
-   </div>
      <input name = "" type = "button" value = "Новое поле" onClick = "AddElement()" />
-     <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddElement ('number')" /> 
-     <input name = "" type = "button" value = "Новый переключатель" onClick = "AddElement ('radio')" /> 
-     <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddElement ('submit')" /> 
-     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" /> 
+     <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddAnyElement ('number')" /> 
+     <input name = "" type = "button" value = "Новый переключатель" onClick = "AddAnyElement ('radio')" /> 
+     <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddAnyElement ('submit')" /> 
+     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddAnyElement ('reset')" /> 
   </form>
   <script> 
-    function AddElement(mytype){ 
+    function AddElement(){ 
     var form=document.getElementById("myForm"); 
-    var oldInput = document.getElementById('fieldset');  
-    form.appendChild(oldInput); 
+    var exampleInput = document.getElementById('fieldset');  
+    form.appendChild(exampleInput); 
     var newline= document.createElement("br"); 
     form.appendChild(newline); 
     }
