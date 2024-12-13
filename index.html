@@ -82,8 +82,8 @@
      <p>* — Обязательные поля</p>
    </div>
   </form>
-  <div id="myForm">
   <form action="" method="get" name="frm"> 
+   <div id="fieldset"> 
     <fieldset>
      <legend>Choose your favorite monster</legend>
      <input type="number" id="kraken" name="field" value="K" placeholder="Ввод" />
@@ -97,9 +97,9 @@
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddElement ('radio')" /> 
      <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddElement ('submit')" /> 
-     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" />    
+     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" />   
+   </div> 
   </form>
-  </div>
   <script> 
     function AddElement(mytype){ 
     var mytype,form=document.getElementById("add"); 
