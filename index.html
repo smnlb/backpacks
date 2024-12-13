@@ -89,19 +89,18 @@
   </form>
   <script> 
     function AddElement(mytype){ 
-    var form=document.getElementById("fieldset"); 
-    var newInput = document.createElement("input");  
-    newInput.type=mytype;
-    newInput.name="input1"; 
-    form.appendChild(newInput); 
+    var form=document.getElementById("frm"); 
+    var oldInput = document.getElementById('fieldset');  
+    form.appendChild(oldInput); 
     var newline= document.createElement("br"); 
     form.appendChild(newline); 
     }
-    form.appendChild(Object.assign(document.getElementById('fieldset'), {
-      type: 'text',
-      name: `input${i}`,
-      placeholder: `Ввод ${i + 1}`
-    }));
+    function AddAnyElement(mytype){
+    var form=document.getElementById("frm");
+    var typicalInput = document.createElement("input");
+    newInput.type=mytype; 
+    form.appendChild(typicalInput);
+    }
     AddElement(number)
   </script>
   <script>
