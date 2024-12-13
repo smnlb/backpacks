@@ -184,13 +184,14 @@
  function AddElement(mytype){
  var mytype,form=document.getElementById('myForm');
  var newInput = document.createElement('input');
- newInput.type='number';
+ newInput.type=mytype;
  newInput.name='input1';
  form.appendChild(newInput);
  var newline = document.createElement ("br"); 
  form.appendChild(newline);
 }
  for (let i = 0; i < 5; i++) {
+  AddElement('number');
   document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
     type: 'text',
     name: `input${i}`,
