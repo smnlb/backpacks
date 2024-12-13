@@ -72,7 +72,7 @@
   <form action="" method="get" name="frm"> 
    <div id="fieldset"> 
     <fieldset>
-     <legend>Choose your favorite monster</legend>
+     <legend>Choose parameters of your book</legend>
      <input type="number" id="num1" name="field" placeholder="Ввод" />
      <label for="num1"></label><br />
      <input type="radio" id="type1" name="field"/>
@@ -89,7 +89,7 @@
   </form>
   <script> 
     function AddElement(mytype){ 
-    var mytype,form=document.getElementById("add"); 
+    var mytype,form=document.getElementById("fieldset"); 
     var newInput = document.createElement("input");  
     newInput.type=mytype;
     newInput.name="input1"; 
