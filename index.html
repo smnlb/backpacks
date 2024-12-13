@@ -97,11 +97,15 @@
     var newline= document.createElement("br"); 
     form.appendChild(newline); 
     }
+    form.appendChild(Object.assign(document.getElementById('fieldset'), {
+      type: 'text',
+      name: `input${i}`,
+      placeholder: `Ввод ${i + 1}`
+    }));
     AddElement(number)
   </script>
   <script>
   for (let i = 0; i < 5; i++) {
-    AddElement()
     document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
       type: 'text',
       name: `input${i}`,
