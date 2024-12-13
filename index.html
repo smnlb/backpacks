@@ -149,13 +149,21 @@
  </script> 
    <form action="" method="get" name="frm"> 
    <div id="add"> 
-     <input type="text" name="textfield">
-   </div> 
-   </form> 
+    <fieldset >
+     <legend>Choose your favorite monster</legend>
+     <input type="number" id="kraken" name="field" value="K" placeholder="Ввод" />
+     <label for="kraken"></label><br />
+     <input type="radio" id="sasquatch" name="field" value="S" />
+     <label for="sasquatch">Sasquatch</label><br />
+     <input type="radio" id="mothman" name="field" value="M" />
+     <label for="mothman">Mothman</label>
+    </fieldset> 
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddElement ('radio')" /> 
      <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddElement ('submit')" /> 
      <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddElement ('reset')" />   
+   </div> 
+   </form>
  <script>
  for (let i = 0; i < 5; i++) {
   AddElement('number');
