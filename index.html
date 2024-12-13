@@ -80,27 +80,19 @@
      <label for="type2">Тонкая</label>
     </fieldset>
   <form action="" method="post" name="frm" id="frm">
-     <input name = "" type = "button" value = "Новое поле" onClick = "AddElement()" />
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddAnyElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddAnyElement ('radio')" /> 
      <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddAnyElement ('submit')" /> 
      <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddAnyElement ('reset')" /> 
   </form>
   <script> 
-    function AddElement(){ 
-    var form=document.getElementById("myForm"); 
-    var exampleInput = document.getElementById('fieldset');  
-    form.appendChild(exampleInput);
-    form.appendChild(exampleInput);
-    form.appendChild(exampleInput); 
-    var newline = document.createElement("br"); 
-    form.appendChild(newline); 
-    }
     function AddAnyElement(mytype){
     var form=document.getElementById("myForm");
     var typicalInput = document.createElement("input");
     typicalInput.type=mytype; 
     form.appendChild(typicalInput);
+    var newline = document.createElement("br"); 
+    form.appendChild(newline); 
     }
     AddAnyElement(number)
   </script>
@@ -137,7 +129,7 @@
     newInputWrapper.appendChild(newInput);
   
     var newButton = document.createElement('button');
-    newButton.textContent = 'Remove';
+    newButton.textContent = ' Remove';
     newButton.classList.add('removeButton');
     newButton.addEventListener('click', function(event) {
       event.preventDefault();
