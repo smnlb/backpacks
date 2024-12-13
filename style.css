@@ -13,6 +13,7 @@ p {
   font-variation-settings:
     "wdth" 100;
 }
+
 /* Отступы */
 table {
   table-layout: fixed;
@@ -35,6 +36,16 @@ thead th:nth-child(3) {
 
 thead th:nth-child(4) {
   width: 35%;
+}
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
 }
 
 th,
