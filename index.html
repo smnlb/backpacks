@@ -36,61 +36,7 @@
  <button type="button" id="function" onclick="fnum2()">function</button>
  </p>
  </form>
- <script type="text/javascript">
-  var d = document;
-  var last_id = 0;
-  function add_value_f() {    
-    // находим нужную таблицу
-    var tbody = d.getElementById('v_table').getElementsByTagName('tbody')[0];    
-    // создаем строку таблицы и добавляем ее
-    var row = d.createElement("tr");
-    tbody.appendChild(row);  
-      // создаем ячейки в вышесозданной строке
-    var td1 = d.createElement("td");
-    var td2 = d.createElement("td");
-    var td3 = d.createElement("td");
-    var td4 = d.createElement("td");  
-    row.appendChild(td1);
-    row.appendChild(td2);
-    row.appendChild(td3);
-    row.appendChild(td4);    
-    last_id = last_id + 1;
-  
-    // добавляем формы ввода в ячейки
-    td1.innerHTML = '<input type="number" name="field['+last_id+']">';
-  }
- </script>
   <form method="post">
-  <div style="overflow-x:auto;">
-  <table border="1" id="v_table">
-  <thead>
-  <tr>
-    <th>xml_id</th>
-    <th>значение</th>
-    <th>сорт.</th>
-    <th>по умол.<input type="radio" name="default" value="none" checked></th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <fieldset>
-        <legend>Choose your favorite monster</legend>
-    
-        <input type="number" id="kraken" name="field" value="K" placeholder="Ввод" />
-        <label for="kraken"></label><br />
-    
-        <input type="radio" id="sasquatch" name="field" value="S" />
-        <label for="sasquatch">Sasquatch</label><br />
-    
-        <input type="radio" id="mothman" name="field" value="M" />
-        <label for="mothman">Mothman</label>
-      </fieldset>
-    </td>
-  </tr>
-  </tbody>
-  </table>
-  </div>  
   <input type="button" onclick="add_value_f()" value="Добавить поле"/>
   <input type="submit" name="send" value="Сохранить">
   </form>
