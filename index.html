@@ -77,27 +77,64 @@
   <tbody>
   <tr>
     <td>
-      <input type="text" name="xml_id[0]">
       <fieldset>
         <legend>Choose your favorite monster</legend>
     
-        <input type="radio" id="kraken" name="monster" value="K" />
+        <input type="radio" id="kraken" name="xml_id[0]" value="K" />
         <label for="kraken">Kraken</label><br />
     
-        <input type="radio" id="sasquatch" name="monster" value="S" />
+        <input type="radio" id="sasquatch" name="xml_id[0]" value="S" />
         <label for="sasquatch">Sasquatch</label><br />
     
-        <input type="radio" id="mothman" name="monster" value="M" />
+        <input type="radio" id="mothman" name="xml_id[0]" value="M" />
         <label for="mothman">Mothman</label>
       </fieldset>
     </td>
-    <td><input type="text" name="values[0]"></td>
-    <td><input type="text" name="val_sort[0]" value="500"></td>
-    <td><input type="radio" name="default" value="0"></td>
+    <td>
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+    
+        <input type="radio" id="kraken" name="values[0]" value="K" />
+        <label for="kraken">Kraken</label><br />
+    
+        <input type="radio" id="sasquatch" name="values[0]" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+    
+        <input type="radio" id="mothman" name="values[0]" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </td>
+    <td>
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+    
+        <input type="radio" id="kraken" name="val_sort[0]" value="K" />
+        <label for="kraken">Kraken</label><br />
+    
+        <input type="radio" id="sasquatch" name="val_sort[0]" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+    
+        <input type="radio" id="mothman" name="val_sort[0]" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </td>
+    <td>
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+    
+        <input type="radio" id="kraken" name="default" value="K" />
+        <label for="kraken">Kraken</label><br />
+    
+        <input type="radio" id="sasquatch" name="default" value="S" />
+        <label for="sasquatch">Sasquatch</label><br />
+    
+        <input type="radio" id="mothman" name="default" value="M" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </td>
   </tr>
   </tbody>
-  </table>
-  
+  </table>  
   <input type="button" onclick="add_value_f()" value="Добавить поле"/>
   <input type="submit" name="send" value="Сохранить">
   </form>
