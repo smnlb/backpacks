@@ -131,14 +131,14 @@
      <button type="button" id="function" onclick="fnum2()">function</button>
    </p>
  </form>
- <p id="text">...</p>
- 
-  <form method="post">
-  <input type="button" onclick="add_value_f()" value="Добавить поле"/>
-  <input type="submit" name="send" value="Сохранить">
-  </form>
-  <form action="#" method="post" target="_blank" id="myForm">
-   <h2></h2>
+ <p id="text"></p>
+
+
+
+
+
+  
+  <form action="#" method="post" id="myForm">
    <fieldset>
      <legend>Введите номера учебников:</legend>
      <ul>
@@ -149,25 +149,6 @@
      </ul>
    </fieldset>
    <fieldset>
-     <legend>Тип обложки</legend>
-     <ul>
-       <li>
-         <input type="radio" name="books" id="books">
-         <label for="books">Толстая</label>
-       </li>
-       <li>
-         <input type="radio" name="video" id="video">
-         <label for="video">Тонкая</label>
-       </li>
-     </ul>
-   </fieldset>
-   <div>
-     <button type="submit">Отправить</button>
-     <p>* — Обязательные поля</p>
-   </div>
-  </form>
-  <form action="" method="post" name="fieldset" id="fieldset">
-    <fieldset>
      <legend>Choose parameters of your book</legend>
      <input type="number" id="num1" name="field" placeholder="Ввод" />
      <label for="num1"></label><br />
@@ -175,25 +156,40 @@
      <label for="type1">Толстая</label><br />
      <input type="radio" id="type2" name="field"/>
      <label for="type2">Тонкая</label>
-    </fieldset>
+   </fieldset>
+   <p>
+     <button type="button" id="button2" pys-onclick="submit_inp" onclick="fform1()">test</button>
+     <button type="submit" id="submit2" onclick="fform1()">submit</button>
+     <button type="button" id="function2" onclick="fform2()">function</button>
+   </p>
   </form>
+  <script>
+  for (let i = 0; i < 5; i++) {
+    document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
+      type: 'text',
+      name: `input${i}`,
+      placeholder: `Ввод ${i + 1}`
+    }));
+  }
+  </script> 
+
   
   <form action="" method="post" name="frm" id="frm">
-     <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddAnyElement ('number')" /> 
-     <input name = "" type = "button" value = "Новый переключатель" onClick = "AddAnyElement ('radio')" /> 
-     <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddAnyElement ('submit')" /> 
-     <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddAnyElement ('reset')" /> 
+     <input name = "" type = "button" value = "new number field" onClick = "AddAnyElement ('number')" /> 
+     <input name = "" type = "button" value = "new radio" onClick = "AddAnyElement ('radio')" /> 
+     <input name = "" type = "button" value = "new submit" onClick = "AddAnyElement ('submit')" /> 
+     <input name = "" type = "button" value = "new reset" onClick = "AddAnyElement ('reset')" /> 
   </form>
 
   <form id="dynamicForm">
     <div id="inputContainer">
       <div class="inputWrapper">
         <input type="text" id="inputField1">
-        <button class="removeButton" id="removeButton" value = 'Remove'></button>
+        <button class="removeButton" id="removeButton" value = 'remove'></button>
       </div>
     </div>
-    <button id="addButton">Add Field</button>
-    <input type="submit" value="Submit">
+    <button id="addButton">new field</button>
+    <input type="submit" value="submit">
   </form>
   </div>
 
@@ -209,15 +205,6 @@
     }
     AddAnyElement(number)
   </script>
-  <script>
-  for (let i = 0; i < 5; i++) {
-    document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
-      type: 'text',
-      name: `input${i}`,
-      placeholder: `Ввод ${i + 1}`
-    }));
-  }
-  </script> 
   
   <script>
   document.getElementById('addButton').addEventListener('click', function(event) {
@@ -244,6 +231,7 @@
     inputContainer.appendChild(newInputWrapper);
   });
   </script>
+  
  <script>
  "use strict";
  function fnum1() {
@@ -265,6 +253,7 @@
    <py-script>
 def submit_inp(e):
  num = int(Element("num").value)
+display(num)
    </py-script>
  </section>
  </body>
