@@ -2,7 +2,7 @@ p {
   background-color: #eee; /* Светло-серый фон */
 }
 dialog::backdrop {
-  background: rgba(255, 0, 0, 0.25);
+  background: rgba(21, 23, 25, 1);
 }
 
 // <uniquifier>: Use a unique and descriptive class name
