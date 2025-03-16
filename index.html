@@ -49,13 +49,17 @@
  </nav>
 
  <section class="pyscript">
-    <b><p>Now is <u><label id='today'></label></u></p></b>
+    <b>
+     <p>
+     Now is 
     <script type="py">
         from pyscript import display
         from datetime import datetime
         now = datetime.now()
         display(now.strftime("%m/%d/%Y, %H:%M:%S"))
    </script>
+    </p>
+   </b>
  </section>
  
  <br>
