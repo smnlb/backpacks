@@ -1,6 +1,9 @@
 p {
   background-color: #eee; /* Светло-серый фон */
 }
+dialog::backdrop {
+  background: rgba(255, 0, 0, 0.25);
+}
 
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 800
