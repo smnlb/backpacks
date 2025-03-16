@@ -49,32 +49,29 @@
  </nav>
 
  <section class="pyscript">
-    <b><p>Today is <u><label id='today'></label></u></p></b>
-    <py-script>
-    import datetime as dt
-    pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
-    </py-script>
+    <b><p>Now is <u><label id='today'></label></u></p></b>
     <script type="py">
         from pyscript import display
         from datetime import datetime
         now = datetime.now()
         display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+        pyscript.write('today',now.strftime("%m/%d/%Y, %H:%M:%S"))
    </script>
  </section>
  
  <br>
- <p>
- This is a simple program to divide textbooks equally between 2 people.
- </p>
+   <p>
+     This is a simple program to divide textbooks equally between 2 people.
+   </p>
  <form>
+   <p>
+     <label for="num">Выберите количество учебников из диапазона: </label> 
+     1<input autofocus class="inp" type="range" step="1" min="1" max="20" value="10" id="num" name="num" autocomplete="off"/>20
+   </p>
  <p>
- <label for="num">Выберите количество учебников из диапазона: </label> 
- 1<input autofocus class="inp" type="range" step="1" min="1" max="20" value="10" id="num" name="num" autocomplete="off"/>20
- </p>
- <p>
- <button type="button" id="button" pys-onclick="submit_inp" onclick="fnum1()">test</button>
- <button type="submit" id="submit" onclick="fnum1()">submit</button>
- <button type="button" id="function" onclick="fnum2()">function</button>
+   <button type="button" id="button" pys-onclick="submit_inp" onclick="fnum1()">test</button>
+   <button type="submit" id="submit" onclick="fnum1()">submit</button>
+   <button type="button" id="function" onclick="fnum2()">function</button>
  </p>
  </form>
   <form method="post">
