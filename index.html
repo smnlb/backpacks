@@ -16,7 +16,7 @@
 
  <!-- This script tag bootstraps PyScript -->
  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-
+ 
  <!-- For splashscreen -->
  <style>
    #loading { outline: none; border: none; background: transparent }
@@ -114,10 +114,12 @@
     </p>
    </b>
  </section>
- 
+
+ <div class="content">
    <p>
      This is a simple program to divide textbooks equally between 2 people.
    </p>
+ 
  <form>
    <p>
      <label for="num">Выберите количество учебников из диапазона: </label> 
@@ -172,12 +174,28 @@
      <input type="radio" id="type2" name="field"/>
      <label for="type2">Тонкая</label>
     </fieldset>
+  </form>
+  
   <form action="" method="post" name="frm" id="frm">
      <input name = "" type = "button" value = "Новое числовое поле" onClick = "AddAnyElement ('number')" /> 
      <input name = "" type = "button" value = "Новый переключатель" onClick = "AddAnyElement ('radio')" /> 
      <input name = "" type = "button" value = "Новая кнопка отправки" onClick = "AddAnyElement ('submit')" /> 
      <input name = "" type = "button" value = "Новая кнопка восстановления" onClick = "AddAnyElement ('reset')" /> 
   </form>
+
+  <form id="dynamicForm">
+    <div id="inputContainer">
+      <div class="inputWrapper">
+        <input type="text" id="inputField1">
+        <button class="removeButton" id="removeButton" value = 'Remove'></button>
+      </div>
+    </div>
+    <button id="addButton">Add Field</button>
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+
+  
   <script> 
     function AddAnyElement(mytype){
     var form=document.getElementById("myForm");
@@ -198,16 +216,7 @@
     }));
   }
   </script> 
-  <form id="dynamicForm">
-    <div id="inputContainer">
-      <div class="inputWrapper">
-        <input type="text" id="inputField1">
-        <button class="removeButton" id="removeButton" value = 'Remove'></button>
-      </div>
-    </div>
-    <button id="addButton">Add Field</button>
-    <input type="submit" value="Submit">
-  </form>
+  
   <script>
   document.getElementById('addButton').addEventListener('click', function(event) {
     event.preventDefault();
