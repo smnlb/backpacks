@@ -236,36 +236,52 @@ print "Hello World"
     <div id="inputContainer">
       <div class="inputWrapper">
         <input type="text" id="inputField1">
-        <button class="removeButton" id="removeButton" value = 'remove'></button>
+        <button class="removeButton" id="removeButton" value = 'remove'>remove</button>
       </div>
     </div>
-    <button id="addButton">new field</button>
+    <button id="addButton">add new field</button>
     <input type="submit" value="submit">
   </form>
   </div>
 
+  <script> 
+    function AddAnyElement(mytype){
+    var form=document.getElementById("myForm");
+    var typicalInput = document.createElement("input");
+    typicalInput.type=mytype; 
+    form.appendChild(typicalInput);
+    var newline = document.createElement("br"); 
+    form.appendChild(newline); 
+    }
+    AddAnyElement(number)
+  </script>
+  <script>
+  for (let i = 0; i < 5; i++) {
+    document.getElementById('myForm').appendChild(Object.assign(document.createElement('input'), {
+      type: 'text',
+      name: input${i},
+      placeholder: Ввод ${i + 1}
+    }));
+  }
+  </script> 
   <script>
   document.getElementById('addButton').addEventListener('click', function(event) {
-    event.preventDefault();
-  
+    event.preventDefault();  
     var inputContainer = document.getElementById('inputContainer');
     var newInputWrapper = document.createElement('div');
-    newInputWrapper.classList.add('inputWrapper');
-  
+    newInputWrapper.classList.add('inputWrapper');  
     var newInput = document.createElement('input');
     newInput.type = 'text';
     newInput.id = 'inputField' + (inputContainer.children.length + 1);
-    newInputWrapper.appendChild(newInput);
-  
+    newInputWrapper.appendChild(newInput);  
     var newButton = document.createElement('button');
-    newButton.textContent = 'Remove';
+    newButton.textContent = 'remove';
     newButton.classList.add('removeButton');
     newButton.addEventListener('click', function(event) {
       event.preventDefault();
       event.target.parentNode.remove();
     });
-    newInputWrapper.appendChild(newButton);
-  
+    newInputWrapper.appendChild(newButton);  
     inputContainer.appendChild(newInputWrapper);
   });
   </script>
