@@ -198,19 +198,6 @@
   </form>
   </div>
 
-  
-  <script> 
-    function AddAnyElement(mytype){
-    var form=document.getElementById("myForm");
-    var typicalInput = document.createElement("input");
-    typicalInput.type=mytype; 
-    form.appendChild(typicalInput);
-    var newline = document.createElement("br"); 
-    form.appendChild(newline); 
-    }
-    AddAnyElement(number)
-  </script>
-  
   <script>
   document.getElementById('addButton').addEventListener('click', function(event) {
     event.preventDefault();
