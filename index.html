@@ -4,7 +4,9 @@
  <!-- Recommended meta tags -->
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width,initial-scale=1.0">
- 
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.13.0/brython.js"></script>
+  
  <!-- PyScript CSS -->
  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
 
@@ -89,7 +91,13 @@
  <link rel="icon" type="image/png" href="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21" />
  </head>
 
- <body style="margin-left:40px">
+ <body style="margin-left:40px" onload="brython()">
+ 
+ <script type="text/python">
+    import browser
+    browser.alert("Hello Real Python!")
+ </script>
+  
  <dialog id="loading">
     <h1 style="color: #d7d7d7">Loading...</h1>
  </dialog>
