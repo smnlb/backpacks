@@ -49,15 +49,18 @@
  </nav>
 
  <section class="pyscript">
-    Hello world! <br />
-    This is the current date and time, as computed by Python:
+    <b><p>Today is <u><label id='today'></label></u></p></b>
+    <py-script>
+    import datetime as dt
+    pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+    </py-script>
     <script type="py">
         from pyscript import display
         from datetime import datetime
         now = datetime.now()
         display(now.strftime("%m/%d/%Y, %H:%M:%S"))
    </script>
-</section>
+ </section>
  
  <br>
  <p>
