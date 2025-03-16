@@ -17,7 +17,7 @@
  <!-- This script tag bootstraps PyScript -->
  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
- <!-- for splashscreen -->
+ <!-- For splashscreen -->
  <style>
    #loading { outline: none; border: none; background: transparent }
  </style>
@@ -30,20 +30,37 @@
  <title>PyScript</title>
  <link rel="icon" type="image/png" href="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21" />
  </head>
- 
- <body style="margin-left:40px">
 
+ <body style="margin-left:40px">
  <dialog id="loading">
     <h1>Loading...</h1>
  </dialog>
 
- <nav style="background-color: #000000">
-       <a href="/">
-         <img src="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21" class="logo" />
-       </a>
-       <a class="title" href="https://smnlb.github.io/tokipona/" style="color: #f0ab3c">tokipona</a>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">home</a></li>
+        <li><a href="https://smnlb.github.io/backpacks/" style="color: #f0ab3c">backpacks</a></li>
+        <li><a href="https://smnlb.github.io/tokipona/" style="color: #ffffff">tokipona</a></li>
+        <li><a href="#" style="color: #ffffff">page</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+      </ul>
+    </div>
+  </div>
  </nav>
-
+  
  <section class="pyscript">
    <b>
     <p>
