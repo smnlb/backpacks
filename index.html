@@ -119,7 +119,12 @@
    <p>
      This is a simple program to divide textbooks equally between 2 people.
    </p>
- 
+
+ <script type="py" src="backpacks.py" terminal></script>
+
+
+
+  
  <form>
    <p>
      <label for="num">Выберите количество учебников из диапазона: </label> 
@@ -132,8 +137,6 @@
    </p>
  </form>
  <p id="text"></p>
-
-
 
 
 
@@ -248,14 +251,5 @@
  alert(localStorage.getItem('num')) 
  }
  </script>
-   
- <section class="pyscript">
-   <py-script>
-def submit_inp():
- num = int(Element("num").value)
- display(num)
-submit_inp()
-   </py-script>
- </section>
  </body>
 </html>
