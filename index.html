@@ -95,10 +95,10 @@
  </dialog>
 
  <ul class="sidenav">
-   <li><a href="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21">smnlb</a></li>
-   <li><a href="https://smnlb.github.io/backpacks/" style="color: #f0ab3c">backpacks</a></li>
-   <li><a href="https://smnlb.github.io/tokipona/" style="color: #ffffff">tokipona</a></li>
-   <li><a href="#" style="color: #ffffff">page</a></li>
+   <li><a href="https://archive.org/services/img/github.com-pyscript-pyscript_-_2022-05-02_22-36-21" style="color: #151719">smnlb</a></li>
+   <li><a href="https://smnlb.github.io/backpacks/" style="color: #151719">backpacks</a></li>
+   <li><a href="https://smnlb.github.io/tokipona/" style="color: #151719">tokipona</a></li>
+   <li><a href="#" style="color: #151719">page</a></li>
  </ul>
   
  <section class="pyscript">
@@ -125,12 +125,14 @@
      <label for="num">Выберите количество учебников из диапазона: </label> 
      1<input autofocus class="inp" type="range" step="1" min="1" max="20" value="10" id="num" name="num" autocomplete="off"/>20
    </p>
- <p>
-   <button type="button" id="button" pys-onclick="submit_inp" onclick="fnum1()">test</button>
-   <button type="submit" id="submit" onclick="fnum1()">submit</button>
-   <button type="button" id="function" onclick="fnum2()">function</button>
- </p>
+   <p>
+     <button type="button" id="button" pys-onclick="submit_inp" onclick="fnum1()">test</button>
+     <button type="submit" id="submit" onclick="fnum1()">submit</button>
+     <button type="button" id="function" onclick="fnum2()">function</button>
+   </p>
  </form>
+ <p id="text">...</p>
+ 
   <form method="post">
   <input type="button" onclick="add_value_f()" value="Добавить поле"/>
   <input type="submit" name="send" value="Сохранить">
