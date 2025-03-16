@@ -1,4 +1,3 @@
-
 from itertools import product
 from random import shuffle
 n1,n2,e1,e2,r,k,rr,nn,dd,t1,t2,t3,t4,mx,cl=[],[],[],[],[],[],[],0,0,0,0,0,0,0.6,True
