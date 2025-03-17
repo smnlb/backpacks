@@ -4,19 +4,11 @@
  <!-- Recommended meta tags -->
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  
- <!-- PyScript CSS -->
- <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-
  <!-- CSS -->
  <link href="style.css" rel="stylesheet" type="text/css" />
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-
- <!-- This script tag bootstraps PyScript -->
- <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
- 
  <!-- For splashscreen -->
  <style>
    #loading { outline: none; border: none; background: transparent }
@@ -26,7 +18,7 @@
    addEventListener('py:ready', () => loading.close());
    loading.showModal();
  </script>
-
+ <!-- Navigation -->
  <style>
   body {margin: 0;}
   ul.sidenav {
@@ -82,44 +74,17 @@
  <link rel="icon" type="image/webp" href="logo.webp" />
  </head>
 
- <body style="margin-left:40px" >
-  
+ <body style="margin-left:40px" > 
  <dialog id="loading">
     <h1 style="color: #d7d7d7">Loading...</h1>
  </dialog>
-
  <ul class="sidenav">
-   <li><a href="#" style="color: #151719">smnlb</a></li>
-   <li><a href="https://smnlb.github.io/backpacks/" style="color: #151719">backpacks</a></li>
-   <li><a href="https://smnlb.github.io/tokipona/" style="color: #151719">tokipona</a></li>
-   <li><a href="#" style="color: #151719">page</a></li>
- </ul>
-
-  
+     <li><a href="https://github.com/smnlb" style="color: #151719">smnlb</a></li>
+     <li><a href="https://smnlb.github.io/backpacks/" style="color: #151719">old</a></li>
+     <li><a href="https://smnlb.github.io/tokipona/" style="color: #151719">tokipona</a></li>
+     <li><a href="https://t.me/lIlllIlIIIl" style="color: #151719">telegram channel</a></li>
+ </ul>  
  <div class="content">
- <p>
-     This is a simple program to divide textbooks equally between 2 people.
- </p>
-  
- <section class="pyscript">
-   <b>
-    <p>
-     Now is 
-     <script type="py">
-        from pyscript import display
-        from datetime import datetime
-        now = datetime.now()
-        display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-     </script>
-    </p>
-   </b>
- <!--<script type="py" src="backpacks.py" terminal worker></script>-->
- <!--<script type="py" terminal worker>
-    print("Hello")
- </script>-->
- </section>
-
-  
  <form>
    <p>
      <label for="num">Select the number of textbooks from the range: </label> 
@@ -133,9 +98,7 @@
  </form>
  <p id="text"></p>
 
-
-
-  
+ 
   <form action="#" method="post" id="myForm">
    <fieldset>
      <legend>Enter textbook numbers:</legend>
@@ -166,7 +129,6 @@
     }));
   }
   </script> 
-
   
   <form action="" method="post" name="frm" id="frm">
      <input name = "" type = "button" value = "new number field" onClick = "AddAnyElement ('number')" /> 
